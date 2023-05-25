@@ -10,7 +10,7 @@ This script will generate a random set of password based on user's choices, the 
 - Symbols
 and password of any length specified by the user.
 
-## Prerequisites
+## Prerequisite
 
 To run the script, you will need to have [Python (3.6 and above)](https://python.org/) installed on your local machine.
 
