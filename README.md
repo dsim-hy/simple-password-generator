@@ -1,6 +1,6 @@
 # Simple Password Generator
 
-A simple command-based password generator made with Python. This program can generate a random set of passwords based on the user's criteria.
+A password generator with both a web interface (Flask) and a command-line interface. Generate secure, random passwords based on your criteria.
 
 ## Features
 
@@ -15,27 +15,30 @@ A simple command-based password generator made with Python. This program can gen
 
 ## Prerequisites
 
-To run the script, you will need to have [Python (3.6 and above)](https://python.org/) installed on your local machine.
+- [Python 3.6+](https://python.org/)
+- [Flask](https://flask.palletsprojects.com/) (for the web interface)
 
-## Instructions
+## Web Interface (Flask)
 
-Follow these steps to run the password generator:
-1. Download or clone this repository to your local machine
-2. Open your command prompt or terminal and navigate to the location of the files
-3. Enter the following command: `python password_gen.py`
-4. Follow the on-screen prompts to choose your password criteria
-5. The generated password(s) and strength rating will be displayed
-
-## Running the Tests
-
-Unit tests are provided in `test_password_gen.py`. Install [pytest](https://pytest.org/) and run:
+Install dependencies and start the server:
 
 ```bash
-pip install pytest
-pytest test_password_gen.py -v
+pip install -r requirements.txt
+python app.py
 ```
 
-## Example
+Then open [http://127.0.0.1:5000](http://127.0.0.1:5000) in your browser.
+
+![Password Generator UI](https://github.com/user-attachments/assets/16b936ff-8982-4b6e-9a38-e11221dfff51)
+![Password Generator Results](https://github.com/user-attachments/assets/2a6fe69c-eae3-46c1-8a6f-dc80af4de752)
+
+## Command-Line Interface
+
+```bash
+python password_gen.py
+```
+
+Follow the on-screen prompts to choose your password criteria. Example:
 
 ```
 $ python password_gen.py
@@ -52,4 +55,13 @@ Password 1: aR8!vZ#2qL@5mW0s
 Password 2: 7Kp$eN1!uX3bYh6@
 Password 3: dT4#wQ9!rJ2nMv8&
 Password Strength:  Strong
+```
+
+## Running the Tests
+
+Install [pytest](https://pytest.org/) and run:
+
+```bash
+pip install pytest
+pytest -v
 ```
